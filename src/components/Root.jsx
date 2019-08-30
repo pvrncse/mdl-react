@@ -7,7 +7,7 @@ import "../custom.css";
 import Content from "./Content";
 class RootComponent extends Component {
   state = {
-    currentPage: "Home"
+    currentPage: "Dashboard"
   };
   handleClick = event => {
     let anchorsClass = document.getElementsByClassName("mdl-navigation__link");

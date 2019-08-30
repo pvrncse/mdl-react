@@ -19,7 +19,7 @@ class SideMenu extends Component {
         </header>
         <nav className="demo-navigation mdl-navigation mdl-color--indigo-900">
           <Link
-            to="/home"
+            to="/dashboard"
             className="mdl-navigation__link"
             onClick={this.props.pageSelect}
           >
@@ -27,9 +27,9 @@ class SideMenu extends Component {
               className="mdl-color-text--indigo-400 material-icons"
               role="presentation"
             >
-              home
+              dashboard
             </i>
-            <span>Home</span>
+            <span>Dashboard</span>
           </Link>
           <Link
             to="/inbox"
@@ -45,7 +45,7 @@ class SideMenu extends Component {
             <span>Inbox</span>
           </Link>
           <Link
-            to="/inbox"
+            to="/trash"
             className="mdl-navigation__link"
             onClick={this.props.pageSelect}
           >

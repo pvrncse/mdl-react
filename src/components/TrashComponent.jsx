@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-class InboxComponent extends Component {
+class TrashComponent extends Component {
   state = {
-    users: []
+    trashMails: []
   };
   componentDidMount() {
     console.log("mount");
@@ -16,7 +16,7 @@ class InboxComponent extends Component {
       .then(
         result => {
           this.setState({
-            users: result
+            trashMails: result
           });
           console.log(result);
           // this.render();
@@ -26,7 +26,7 @@ class InboxComponent extends Component {
         // exceptions from actual bugs in components.
         error => {
           this.setState({
-            users: null
+            trashMails: null
           });
           console.log(error);
         }
@@ -34,13 +34,13 @@ class InboxComponent extends Component {
   };
   removeRow = mail => {
     console.log(mail);
-    this.state.users.map(({ email }, index) => {
+    this.state.trashMails.map(({ email }, index) => {
       if (mail === email) {
-        this.state.users.splice(index, 1);
+        this.state.trashMails.splice(index, 1);
       }
     });
     this.setState({
-      users: this.state.users
+      trashMails: this.state.trashMails
     });
   };
   render() {
@@ -60,7 +60,7 @@ class InboxComponent extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.users.map(({ name, email, website: title }) => (
+              {this.state.trashMails.map(({ name, email, website: title }) => (
                 <tr key={name}>
                   <td className="mdl-data-table__cell--non-numeric">{name}</td>
                   <td>{title}</td>
@@ -84,4 +84,4 @@ class InboxComponent extends Component {
   }
 }
 
-export default InboxComponent;
+export default TrashComponent;

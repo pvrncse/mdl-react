@@ -216,3 +216,15 @@ _:-ms-input-placeholder,
   -ms-flex-align: center;
   align-items: center;
 }
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url("../src/images/welcome_card.jpg") center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+/* div > .demo-card-wide.mdl-card.mdl-shadow--2dp {
+  width: 50%;
+  margin: 5px;
+} */
